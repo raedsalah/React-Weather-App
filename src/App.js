@@ -3,12 +3,24 @@ import Titles from "./components/titles";
 import Form from "./components/form";
 import Weather from "./components/weather";
 
+const API_KEY = "1d354042fb1f21587d99fa90a19af05c";
+
 class App extends React.Component {
+  getWeather = async e => {
+    e.preventDefault();
+    const api_call = await fetch(
+      "http://api.openweathermap.org/data/2.5/weather?q=London&appid=" +
+        API_KEY +
+        "&units=metric"
+    );
+    const data = await api_call.json();
+    console.log(data);
+  };
   render() {
     return (
       <div>
         <Titles />
-        <Form />
+        <Form getWeather={this.getWeather} />
         <Weather />
       </div>
     );
