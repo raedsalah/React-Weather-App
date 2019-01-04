@@ -29,14 +29,20 @@ class App extends React.Component {
     );
     const data = await api_call.json();
     console.log(data);
-    this.setState({
-      temperature: data.main.temp,
-      city: data.name,
-      country: data.sys.country,
-      humidity: data.main.humidity,
-      description: data.weather[0].description,
-      error: ""
-    });
+    if (city && country) {
+      this.setState({
+        temperature: data.main.temp,
+        city: data.name,
+        country: data.sys.country,
+        humidity: data.main.humidity,
+        description: data.weather[0].description,
+        error: ""
+      });
+    } else {
+      this.setState({
+        error: "Please fill up the text fields"
+      });
+    }
   };
   render() {
     return (

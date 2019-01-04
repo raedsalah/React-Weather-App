@@ -15,7 +15,7 @@ class Weather extends Component {
             <p>Condition: {this.props.desc}</p>
           </div>
         ) : (
-          <div>Empty {this.props.error}</div>
+          <div>{this.props.error}</div>
         )}
       </div>
     );
