@@ -2,6 +2,7 @@ import React from "react";
 import Titles from "./components/titles";
 import Form from "./components/form";
 import Weather from "./components/weather";
+import Footer from "./components/footer";
 
 const API_KEY = "1d354042fb1f21587d99fa90a19af05c";
 
@@ -79,6 +80,15 @@ class App extends React.Component {
                     humidity={this.state.humidity}
                     desc={this.state.description}
                     error={this.state.error}
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-12">
+                  <Footer
+                    gitProf={"https://github.com/raedsalah"}
+                    gitRepo={"https://github.com/raedsalah/React-Weather-App"}
+                    hackerName={"Raed Salah "}
                   />
                 </div>
               </div>
