@@ -1,6 +1,12 @@
 import React from "react";
 
 const Weather = props => {
+  let humidity = props.humidity;
+  if (humidity > 70) {
+    humidity += "% Thats humid humid";
+  } else {
+    humidity += "%";
+  }
   return (
     <div className="weather__info">
       {props.country && props.city ? (
@@ -24,7 +30,7 @@ const Weather = props => {
             <span className="weather__value">{props.temp_min}&deg;c</span>
           </p>
           <p className="weather__key">
-            Humidity: <span className="weather__value">{props.humidity}</span>
+            Humidity: <span className="weather__value">{humidity}</span>
           </p>
           <p className="weather__key">
             Condition: <span className="weather__value">{props.desc}</span>
