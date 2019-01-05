@@ -13,7 +13,15 @@ const Weather = props => {
           </p>
           <p className="weather__key">
             Temperature:{" "}
-            <span className="weather__value">{props.temperature}</span>
+            <span className="weather__value">{props.temp}&deg;c</span>
+          </p>
+          <p className="weather__key">
+            Max temperature:{" "}
+            <span className="weather__value">{props.temp_max}&deg;c</span>
+          </p>
+          <p className="weather__key">
+            Minimum temperature:{" "}
+            <span className="weather__value">{props.temp_min}&deg;c</span>
           </p>
           <p className="weather__key">
             Humidity: <span className="weather__value">{props.humidity}</span>
