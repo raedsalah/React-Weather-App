@@ -30,7 +30,7 @@ class App extends React.Component {
     const data = await api_call.json();
     console.log(data);
     if (city && country) {
-      if (data.cod == "404") {
+      if (data.cod === "404") {
         this.setState({
           temperature: undefined,
           city: undefined,
