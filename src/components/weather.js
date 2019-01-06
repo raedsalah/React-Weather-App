@@ -12,28 +12,30 @@ const Weather = props => {
       {props.country && props.city ? (
         <div>
           <p className="weather__key">
-            Location:{" "}
+            <i class="fas fa-map-marked-alt" />:{" "}
             <span className="weather__value">
               {props.country}, {props.city}
             </span>
           </p>
           <p className="weather__key">
-            Temperature:{" "}
+            <i class="fas fa-thermometer-empty" />:{" "}
             <span className="weather__value">{props.temp}&deg;c</span>
           </p>
           <p className="weather__key">
-            Max temperature:{" "}
+            <i class="fas fa-temperature-high" />:{" "}
             <span className="weather__value">{props.temp_max}&deg;c</span>
           </p>
           <p className="weather__key">
-            Minimum temperature:{" "}
+            <i class="fas fa-temperature-low" />:{" "}
             <span className="weather__value">{props.temp_min}&deg;c</span>
           </p>
           <p className="weather__key">
-            Humidity: <span className="weather__value">{humidity}</span>
+            <i class="fas fa-tint" />:{" "}
+            <span className="weather__value">{humidity}</span>
           </p>
           <p className="weather__key">
-            Condition: <span className="weather__value">{props.desc}</span>
+            <i class="fas fa-sun" />:{" "}
+            <span className="weather__value">{props.desc}</span>
           </p>
         </div>
       ) : (
